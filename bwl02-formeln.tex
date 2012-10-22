@@ -1,0 +1,167 @@
+\documentclass[a4paper,12pt]{scrartcl} 
+
+%\usepackage[latin1]{inputenc} 
+%Apple \usepackage[applemac]{inputenc} 
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+%Das Paket erzeugt ein anklickbares Verzeichnis in der PDF-Datei.
+\usepackage[hyperfootnotes=false,colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}
+
+%Das Paket wird fr die anderthalb-zeiligen Zeilenabstand bentigt
+\usepackage{setspace}
+
+%Einr�ckung eines neuen Absatzes
+\setlength{\parindent}{0em}
+
+%Definition der Rnder
+\usepackage[paper=a4paper,left=30mm,right=30mm,top=30mm,bottom=30mm]{geometry} 
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{graphicx}
+\usepackage{mathcomp}
+\usepackage{polynom}
+
+
+%Abstand der Fu�noten
+\deffootnote{1em}{1em}{\textsuperscript{\thefootnotemark\ }}
+
+%Regeln, bis zu welcher Tiefe (section,subsection,subsubsection) berschriften angezeigt werden sollen (Anzeige der berschriften im Verzeichnis / Anzeige der Nummerierung)
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+%-------------------
+%Ende des Kopfbereiches
+%-------------------
+
+
+
+
+%-------------------
+%Hier beginnt der Text deiner Hausarbeit
+%-------------------
+\begin{document}
+
+
+%Beginn der Titelseite
+\begin{titlepage}
+\begin{small}
+\vfill {AKAD\\ 
+Bachelor of Science (Wirtschaftsinformatik) \\ 
+Modulzusammenfassung}
+\end{small}
+
+
+\begin{center}
+\begin{Large}
+\vfill {\textsf{\textbf{
+Bwl02 \\
+\vspace*{1cm} 
+Formelsammlung
+}}}
+\end{Large}
+\end{center}
+
+\begin{small}
+\vfill Daniel Falkner \\ Rotbach 529 \\  94078 Freyung \\  daniel.falkner@akad.de \\ 
+\today
+\end{small}
+
+\end{titlepage}
+%Ende der Titelseite
+
+
+%Inhaltsverzeichnis (aktualisiert sich erst nach dem zweiten Setzen)
+\tableofcontents
+\thispagestyle{empty}
+
+%Beginn einer neuen Seite
+\clearpage
+
+%Anderthalbzeiliger Zeilenabstand ab hier
+\onehalfspacing
+
+\pagestyle{plain}
+
+
+\section{Formeln}
+
+\subsection{Eigenkapital}
+Eigenkapital = Aktiva - Passiva
+\subsection{Gesamtkosten}
+Gesamtkosten = Fixkosten + (Menge * variable Stückkosten)
+\subsection{Erfolg}
+Erfolg = Ertrag - Aufwand
+\subsubsection{Erfolg je Kostenträger}
+Erfolg je Kostenträger = Erlöse - Selbstkosten 
+\subsection{Erlös}
+Erlös = Menge * Verkaufspreis
+\subsection{Deckungsbeitrag}
+Deckungsbeitrag = Erlös - variable Kosten
+\subsection{BEP} 
+BEP \footnote{Break Even Point} = $\cfrac{Fix~Kosten}{St"uckpreis - variable~ Kosten}$ 
+\\
+\\
+BEP  = $\cfrac{Fix~Kosten}{Deckungsbeitrag}$ 
+
+
+\subsection{Marktanteil}
+Marktanteil = $\cfrac{Unternehmensumsatz}{Branchenumsatz}$
+\subsubsection{Relativer Marktanteil}
+Relativer Marktanteil = $\cfrac{Unternehmensumsatz}{Umsatz~st"arkster~Konkurrent}$
+
+\subsection{Leistung je Mitarbeiter}
+Leistung je Mitarbeiter = $\cfrac{Umsatz}{Mitarbeiteranzahl}$
+\subsection{Werbeaufwand am Umsatz}
+Anteil Werbeaufwand am Umsatz = $\cfrac{Werbeaufwand~Produkt~X}{Umsatz~Produkt~X}$
+
+
+%% Kennzahlen des Produktionsmanagement 
+
+\subsection{Kapzität}
+Kapazität = $\cfrac{Menge~des~Outputs}{Zeiteinheit}$
+
+
+\subsection{Beschäftigungsgrad}
+Beschäftigungsgrad = $\cfrac{tatsächliche~Leistung}{Maximalleistung~(Kapazit"at)}$
+
+\subsection{Produktivität}
+Produktivität = $\cfrac{Ausbringungsmenge}{Einsatzmenge}$ = $\frac{Output}{Input}$ 
+\subsubsection{Arbeits Produktivität}
+Arbeits Produktivität = $\cfrac{Produktionsmenge}{Arbeiter/Arbeitsstunden}$
+\subsubsection{Maschinen Produktivität}
+Maschinen Produktivität = $\cfrac{Produktionsmenge}{Maschinen/Maschinensstunden}$
+
+\subsection{Wirtschaftlichkeit}
+Wirtschaftlichkeit = $\cfrac{Ausbringungswert}{Kosten~der~Produktionsfaktoren} = \cfrac{Leistung}{Kosten}$ 
+
+\subsection{Rentabilität} 
+Rentabilität = $\cfrac{Gewinn}{Kapital} * 100$ 
+
+\subsection{ROI} 
+ROI \footnote{Return-On-Invest} = $\cfrac{Gewinn}{Umsatz} * \cfrac{Umsatz}{Kapital} * 100$ 
+
+\subsection{Servicegrad} 
+Servicegrad = $\cfrac{Anzahl~befriedigter~Bedarfsanforderungen}{Anzahl~Bedarfsanforderungen}$ 
+
+
+\subsection{Umschlagshäufigkeit}
+Umschlagshäufigkeit = $\cfrac{Verbauch~pro~Periode}{Durchschnittlicher~Lagerbestand}$
+\subsubsection{Kapitalumschlagshäufigkeit}
+Kapitalumschlagshäufigkeit = $\cfrac{Umsatz}{Kapital}$
+
+\subsection{Durchschnittliche Lagerdauer} 
+Durchschnittliche Lagerdauer = $\cfrac{360}{Umschlagsh"aufigkeit}$ 
+
+\subsection{Umsatzrendite} 
+Umsatzrendite = $\cfrac{Gewinn}{Umsatz} * 100$ 
+
+
+
+
+
+\end{document}
+
