@@ -12,11 +12,8 @@ view:
 	fi
 	
 clean:
-	rm $(filename).aux
-	rm $(filename).log
-	rm $(filename).toc
-	rm $(filename).out
-
-distclean: 
-	rm $(filename).pdf
+	git clean -fx
+distclean:
+	git checkout -f master
 	$(MAKE) clean
+
